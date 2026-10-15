@@ -1,0 +1,7 @@
+version: 1
+projects:
+  - id: swagger-petstore-openapi-3-0
+    name: Swagger Petstore - OpenAPI 3.0
+    openapi: src/main/resources/openapi.yaml
+    overlay: src/main/resources/overlay.yaml
+    saveMode: direct

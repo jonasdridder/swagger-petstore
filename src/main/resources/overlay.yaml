@@ -1,0 +1,24 @@
+overlay: 1.1.0
+info:
+  title: Swagger Petstore - OpenAPI 3.0 — documentatie-overlay
+  version: 1.0.0
+  description: Update overlay for Swagger Petstore - OpenAPI 3.0
+actions:
+  - target: $['tags'][0]['name']
+    update: pets
+  - target: $['paths'][*][?(@['operationId'] == "updatePet")]['tags'][0]
+    update: pets
+  - target: $['paths'][*][?(@['operationId'] == "addPet")]['tags'][0]
+    update: pets
+  - target: $['paths'][*][?(@['operationId'] == "findPetsByStatus")]['tags'][0]
+    update: pets
+  - target: $['paths'][*][?(@['operationId'] == "findPetsByTags")]['tags'][0]
+    update: pets
+  - target: $['paths'][*][?(@['operationId'] == "getPetById")]['tags'][0]
+    update: pets
+  - target: $['paths'][*][?(@['operationId'] == "updatePetWithForm")]['tags'][0]
+    update: pets
+  - target: $['paths'][*][?(@['operationId'] == "deletePet")]['tags'][0]
+    update: pets
+  - target: $['paths'][*][?(@['operationId'] == "uploadFile")]['tags'][0]
+    update: pets
